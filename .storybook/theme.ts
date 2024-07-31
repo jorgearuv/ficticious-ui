@@ -3,8 +3,9 @@ import { ThemeVars } from '@storybook/theming'
 
 export default create({
   base: 'light',
-  brandTitle: 'Moffin UI',
+  brandTitle: 'Ficticious UI',
   brandUrl: '/',
-  brandImage: '../public/logo.png',
+  brandImage:
+    'https://res.cloudinary.com/jorgecloud/image/upload/v1722408166/d7jiwnzzpbv4q16n3a9i.png',
   brandTarget: '_self',
 }) as ThemeVars
