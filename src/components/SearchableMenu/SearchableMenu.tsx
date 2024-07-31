@@ -113,7 +113,7 @@ export const SearchableMenu = ({
   }
 
   return (
-    <div className="relative w-64" ref={menuRef}>
+    <div className="relative w-full" ref={menuRef}>
       <div
         role="combobox"
         aria-expanded={isOpen}
