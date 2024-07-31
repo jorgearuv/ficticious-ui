@@ -1,17 +1,16 @@
 {
   "name": "ficticious-ui",
-  "private": true,
   "version": "0.0.0",
   "engines": {
     "node": ">=20.10.0"
   },
-  "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/ficticious-ui.es.js",
-      "require": "./dist/ficticious-ui.cjs.js"
+      "require": "./dist/ficticious-ui.cjs.js",
+      "default": "./dist/ficticious-ui.umd.js"
     },
     "./styles.css": {
       "require": "./dist/styles.css",
@@ -32,7 +31,8 @@
     "storybook:css": "tailwindcss -w -i ./src/tailwind-entry.css -o ./src/index.css",
     "build-storybook": "concurrently 'pnpm build-storybook:css' 'storybook build'",
     "build-storybook:css": "tailwindcss -m -i ./src/tailwind-entry.css -o ./src/index.css",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "pnpm build",
+    "preinstall": "npx only-allow pnpm"
   },
   "peerDependencies": {
     "react": "^18.3.1",
