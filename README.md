@@ -1,39 +1,73 @@
-# React + TypeScript + Vite
+# Ficticious UI
 
-This template provides a minimal setup to get React working in Vite with HMR and
-some ESLint rules.
+Ficticious UI is a component library designed to help developers create the best
+experience for their users. Visit the
+[Ficticious UI style guide](https://www.figma.com/design/v2h33VlX8BCqcVwNcYKb99/Case-study---Jorge-Ruvalcaba?node-id=0-1&t=A94F8EnW8sCwRagq-0)
+to learn more.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
-  uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc)
-  uses [SWC](https://swc.rs/) for Fast Refresh
+Run the following command using [npm](https://www.npmjs.com/):
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the
-configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm install ficticious-ui --save
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to
-  `plugin:@typescript-eslint/recommended-type-checked` or
-  `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install
-  [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and
-  add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends`
-  list
+If you prefer [Yarn](https://yarnpkg.com/en/), use the following command
+instead:
+
+```bash
+yarn add ficticious-ui
+```
+
+### Usage
+
+1. Import the CSS directly into your project if your asset packager supports it:
+
+```js
+import 'ficticious-ui/styles.css'
+```
+
+Otherwise include the CSS in your HTML. We suggest copying the latest
+[styles file](https://unpkg.com/ficticious-ui@0.0.1/dist/styles.css) into your
+own project. This will need to be updated with future releases.
+
+```html
+<link rel="stylesheet" href="styles.css" />
+```
+
+2. Include the translations and any of the provided components in your project:
+
+```js
+import { SearchableMenu } from 'ficticious-ui'
+```
+
+3. Tell React to render the element in the DOM:
+
+```js
+ReactDOM.render(
+  <div>
+    <SearchableMenu
+      items={[
+        { value: 'max', label: 'Max Mendez' },
+        { value: 'victor', label: 'Victor Díaz' },
+        { value: 'jesus', label: 'Jesús Millán' },
+      ]}
+      label="Pick a user"
+      onSelect={item => console.log('Selected:', item)}
+    />
+  </div>,
+  document.querySelector('#app'),
+)
+```
+
+## Development
+
+We use Storybook to create a simple, hot-reloading playground for development on
+these components. You can edit the components file you are working on, and run
+`pnpm storybook` in order to start the development server.
+
+### Manual visual regression testing
+
+To start a server for manually viewing the visual regression testing examples,
+run `pnpm storybook`.
