@@ -8,8 +8,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: './src/index.ts',
-      name: 'moffin-ui',
-      fileName: format => `moffin-ui.${format}.js`,
+      name: 'ficticious-ui',
+      fileName: format => `ficticious-ui.${format}.js`,
       formats: ['es', 'cjs', 'umd'],
     },
     rollupOptions: {
