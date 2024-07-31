@@ -2,7 +2,12 @@
   "name": "ficticious-ui",
   "private": true,
   "version": "0.0.0",
-  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/ficticious-ui.es.js",
@@ -46,6 +51,7 @@
     "@storybook/react-vite": "^8.2.6",
     "@storybook/test": "^8.2.6",
     "@storybook/theming": "^8.2.6",
+    "@types/node": "^22.0.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",

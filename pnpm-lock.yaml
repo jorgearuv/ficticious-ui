@@ -51,6 +51,9 @@ importers:
       '@storybook/theming':
         specifier: ^8.2.6
         version: 8.2.6(storybook@8.2.6(@babel/preset-env@7.25.0(@babel/core@7.24.9)))
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.0.0
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -5238,11 +5241,11 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 18.19.42
+      '@types/node': 22.0.0
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 18.19.42
+      '@types/node': 22.0.0
 
   '@types/cross-spawn@6.0.6':
     dependencies:
@@ -5260,7 +5263,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.5':
     dependencies:
-      '@types/node': 18.19.42
+      '@types/node': 22.0.0
       '@types/qs': 6.9.15
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -5325,12 +5328,12 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 18.19.42
+      '@types/node': 22.0.0
 
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 18.19.42
+      '@types/node': 22.0.0
       '@types/send': 0.17.4
 
   '@types/unist@3.0.2': {}

@@ -1,24 +1,25 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "esModuleInterop": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
     "isolatedModules": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "declaration": true,
-    "declarationMap": true,
-    "noEmit": false,
-    "noEmitHelpers": true,
-    "jsx": "react",
-    "lib": ["dom", "dom.iterable", "scripthost", "es2020"],
-    "module": "esnext",
-    "target": "es2020"
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["./src", "./tests", ".storybook/**/*.ts", ".storybook/**/*.tsx"],
-  "exclude": ["./src/components/**/*.stories.tsx"]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
