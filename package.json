@@ -4,12 +4,20 @@
   "engines": {
     "node": ">=20.10.0"
   },
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "type": "module",
   "types": "./dist/index.d.ts",
+  "main": "./dist/ficticious-ui.cjs.js",
+  "module": "./dist/ficticious-ui.es.js",
+  "unpkg": "./dist/ficticious-ui.umd.js",
   "exports": {
     ".": {
       "import": "./dist/ficticious-ui.es.js",
       "require": "./dist/ficticious-ui.cjs.js",
-      "default": "./dist/ficticious-ui.umd.js"
+      "umd": "./dist/ficticious-ui.umd.js"
     },
     "./styles.css": {
       "require": "./dist/styles.css",
