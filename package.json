@@ -4,7 +4,6 @@
   "engines": {
     "node": ">=20.10.0"
   },
-  "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
