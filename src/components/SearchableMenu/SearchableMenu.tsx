@@ -127,7 +127,7 @@ export const SearchableMenu = ({
           className={`absolute left-4 transition-all duration-200 pointer-events-none text-gray-500
             ${
               isFocused || searchTerm
-                ? 'text-xs left-1.5 -top-2 bg-white px-1'
+                ? 'text-xs left-[6px] -top-2 bg-white px-1'
                 : 'text-sm top-5'
             }`}
         >
