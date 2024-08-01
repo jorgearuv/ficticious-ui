@@ -86,6 +86,7 @@ export const SearchableMenu = ({
         setActiveIndex(prevIndex => (prevIndex > 0 ? prevIndex - 1 : prevIndex))
         break
       case 'Enter':
+        event.preventDefault()
         if (activeIndex >= 0 && activeIndex < filteredItems.length) {
           handleSelect(filteredItems[activeIndex])
         }
@@ -133,6 +134,7 @@ export const SearchableMenu = ({
           {label}
         </label>
         <input
+          data-testid="textbox"
           ref={inputRef}
           type="text"
           aria-autocomplete="list"
@@ -173,6 +175,7 @@ export const SearchableMenu = ({
       {isOpen ? (
         <ul
           id="search-listbox"
+          data-testid="listbox"
           role="listbox"
           className="absolute z-10 w-full mt-1 bg-white rounded-lg shadow-lg max-h-40 overflow-y-auto gap-1 px-1 py-2"
           aria-label="Search results"

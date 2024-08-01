@@ -37,11 +37,13 @@
     "storybook:css": "tailwindcss -w -i ./src/tailwind-entry.css -o ./src/index.css",
     "build-storybook": "concurrently 'pnpm build-storybook:css' 'storybook build'",
     "build-storybook:css": "tailwindcss -m -i ./src/tailwind-entry.css -o ./src/index.css",
+    "test": "vitest run",
     "release:major": "pnpm version $(semver $npm_package_version -i major) && pnpm publish --tag latest",
     "release:minor": "pnpm version $(semver $npm_package_version -i minor) && pnpm publish --tag latest",
     "release:patch": "pnpm version $(semver $npm_package_version -i patch) && pnpm publish --tag latest",
     "prepublishOnly": "pnpm build",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky"
   },
   "peerDependencies": {
     "react": "^18.3.1",
@@ -60,6 +62,9 @@
     "@storybook/react-vite": "^8.2.6",
     "@storybook/test": "^8.2.6",
     "@storybook/theming": "^8.2.6",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
     "@types/node": "^22.0.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -72,12 +77,16 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "eslint-plugin-storybook": "^0.8.0",
+    "happy-dom": "^14.12.3",
+    "husky": "^9.1.4",
+    "jsdom": "^24.1.1",
     "postcss": "^8.4.40",
     "semver": "^7.6.3",
     "storybook": "^8.2.6",
     "tailwindcss": "^3.4.7",
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
-    "vite-plugin-dts": "4.0.0-beta.1"
+    "vite-plugin-dts": "4.0.0-beta.1",
+    "vitest": "^2.0.5"
   }
 }
