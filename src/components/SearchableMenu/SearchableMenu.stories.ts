@@ -29,7 +29,7 @@ export const Default: Story = {
 
 export const WithManyItems: Story = {
   args: {
-    items: Array.from({ length: 100 }, (_, i) => ({
+    items: Array.from({ length: 1000 }, (_, i) => ({
       label: `Item ${i + 1}`,
       value: `item-${i + 1}`,
     })),

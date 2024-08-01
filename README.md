@@ -73,6 +73,10 @@ We use Storybook to create a simple, hot-reloading playground for development on
 these components. You can edit the components file you are working on, and run
 `pnpm storybook` in order to start the development server.
 
+## Testing
+
+We use Vitest for testing. To run the tests, run `pnpm test`.
+
 ### Manual visual regression testing
 
 To start a server for manually viewing the visual regression testing examples,
