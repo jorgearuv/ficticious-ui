@@ -2,7 +2,7 @@
 
 Ficticious UI is a component library designed to help developers create the best
 experience for their users. Visit the
-[Ficticious UI style guide](https://www.figma.com/design/v2h33VlX8BCqcVwNcYKb99/Case-study---Jorge-Ruvalcaba?node-id=0-1&t=A94F8EnW8sCwRagq-0)
+[Ficticious UI style guide](https://ficticious-ui.vercel.app/?path=/docs/ficticious-design-system-configure-your-project--docs)
 to learn more.
 
 ## Installation
@@ -10,7 +10,7 @@ to learn more.
 Run the following command using [npm](https://www.npmjs.com/):
 
 ```bash
-npm install ficticious-ui --save
+npm install ficticious-ui
 ```
 
 If you prefer [Yarn](https://yarnpkg.com/en/), use the following command
@@ -18,6 +18,12 @@ instead:
 
 ```bash
 yarn add ficticious-ui
+```
+
+If you prefer [pnpm](https://pnpm.io/), use the following command instead:
+
+```bash
+pnpm add ficticious-ui
 ```
 
 ### Usage
