@@ -4,9 +4,6 @@ import { SearchableMenu, MenuItem } from './SearchableMenu'
 const meta = {
   title: 'SearchableMenu',
   component: SearchableMenu,
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
   argTypes: {
     onSelect: (item: MenuItem) => console.log('Selected:', item),
@@ -24,7 +21,7 @@ const items = [
 
 export const Default: Story = {
   args: {
-    items: items,
+    items,
     label: 'Elige un usuario',
     onSelect: (item: MenuItem) => console.log('Selected:', item),
   },
@@ -32,17 +29,11 @@ export const Default: Story = {
 
 export const WithManyItems: Story = {
   args: {
-    items: [
-      ...items,
-      { value: 'ana', label: 'Ana García' },
-      { value: 'carlos', label: 'Carlos Rodríguez' },
-      { value: 'laura', label: 'Laura Fernández' },
-      { value: 'diego', label: 'Diego Morales' },
-      { value: 'sofia', label: 'Sofía Pérez' },
-      { value: 'maria', label: 'María López' },
-      { value: 'javier', label: 'Javier Martínez' },
-    ],
-    label: 'Elige un usuario',
+    items: Array.from({ length: 100 }, (_, i) => ({
+      label: `Item ${i + 1}`,
+      value: `item-${i + 1}`,
+    })),
+    label: 'Select an item',
     onSelect: item => console.log('Selected:', item),
   },
 }

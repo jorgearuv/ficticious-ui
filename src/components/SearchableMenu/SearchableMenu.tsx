@@ -126,7 +126,7 @@ export const SearchableMenu = ({
           className={`absolute left-4 transition-all duration-200 pointer-events-none text-gray-500
             ${
               isFocused || searchTerm
-                ? 'text-xs left-2 -top-2 bg-white px-1'
+                ? 'text-xs left-1.5 -top-2 bg-white px-1'
                 : 'text-sm top-5'
             }`}
         >
@@ -174,7 +174,7 @@ export const SearchableMenu = ({
         <ul
           id="search-listbox"
           role="listbox"
-          className="absolute z-10 w-full mt-1 bg-white rounded-lg shadow-lg max-h-60 overflow-y-auto gap-1 px-1 py-2"
+          className="absolute z-10 w-full mt-1 bg-white rounded-lg shadow-lg max-h-40 overflow-y-auto gap-1 px-1 py-2"
           aria-label="Search results"
         >
           {filteredItems.length > 0 ? (
