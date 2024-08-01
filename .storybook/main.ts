@@ -11,7 +11,7 @@ const config: StorybookConfig = {
   stories: [
     {
       directory: '../src/docs/',
-      titlePrefix: 'Ficticious Design System',
+      titlePrefix: 'Ficticious UI',
       files: '**/*.mdx',
     },
     {
