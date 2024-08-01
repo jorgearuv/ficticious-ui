@@ -35,7 +35,7 @@ import 'ficticious-ui/styles.css'
 ```
 
 Otherwise include the CSS in your HTML. We suggest copying the latest
-[styles file](https://unpkg.com/ficticious-ui@0.0.1/dist/styles.css) into your
+[styles file](https://unpkg.com/ficticious-ui@0.0.3/dist/styles.css) into your
 own project. This will need to be updated with future releases.
 
 ```html
